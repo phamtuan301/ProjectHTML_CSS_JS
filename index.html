@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Management</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav class="header">
+      <p>GYM MANAGEMENT</p>
+      <ul>
+        <li><a href="">Trang chủ</a></li>
+        <li id="role-link"></li>
+        <li id="auth-links">
+          <a href="../../pages/auth/login.html">Đăng nhập</a>/<a
+            href="../../pages/auth/register.html"
+            >Đăng ký</a
+          >
+        </li>
+        <li id="user-info" style="display: none"></li>
+        
+      </ul>
+    </nav>
+    <div class="relative">
+      <img
+        src="https://s3-alpha-sig.figma.com/img/a816/367e/548d6aab61dcb73cfa8854af38fcac5b?Expires=1744588800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KRqtESDO~3ijkDmarDTKFmS3HIxA4psJ8CLqvt0VNBhBY0Q4RXroQ3g2ugYJjNgfUE7DenCMsrgdG455lss0ji0tg67zCe~h6G97TvTD9EIv6btI-X2Qyk95V5YF6SGarxBy7y8yX~GtR9b9z-MuAdSTTNS0Xz07rgFVthJsq97icXWxjUU64BmSFdvNmmC6DY~AE8JZFF41qdddbuNRbnVgwzhwNM4DeG8KQPU9VZO3cNpr8Tdz8mmnBok37ygaz8PhtBUrLhAS0a2deGcz4aKFptGSst-fvFEXMXqTin2e81r4P2eta5k0Mf-RPnT2eVJkTsRGwHsvYozVtcnXpA__"
+      />
+      <div class="text">
+        <p class="big">Welcome to Our Gym</p>
+        <p class="small">Transform Your Body, Transform Your Life</p>
+        <button>Bắt đầu ngay</button>
+      </div>
+    </div>
+    <div class="container">
+      <p class="head">Các lớp học phổ biến</p>
+      <div class="classtype">
+        <div>
+          <img
+            src="https://s3-alpha-sig.figma.com/img/d405/a43c/2e91df2b44cac686ac97525ce247c5b6?Expires=1744588800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=q2Q8uLyU0TGl~sBOL2xDnfDX-2a9r~SpmOfz9PdOv7f~NQfCjdzqW90baI~J9z2Y6aFm2kiP4TKAnCFrjxhHrM7gnrfl7GX~ubrz5fhJBH8L3LKe~0MZ3iUdxhxi1PZ17-zBIzqZAV-rxCkyob3excIOtvV1P7BNgChkvnT~iq1AinHIS1y0XqPRJtxmkMErNEI0I2jskfX9oKMr-XHFfdTnSvlqFqphIdNrhKLVKvTJ5nStj4bdU3aE4pLmK-jCWkPwFXHhnR~FRBF-yFW1RQtUlwc184Y0zE0P4VuxqtxDsd4xcsX~vR~K6eRGosnDOkEa5cLMEwis1T2lG--nxA__"
+            alt=""
+          />
+          <p class="name">Gym</p>
+          <p class="title">Tập luyện với các thiết bị hiện đại</p>
+          <button>Đặt lịch</button>
+        </div>
+        <div>
+          <img
+            src="https://s3-alpha-sig.figma.com/img/c76c/19de/1febdf97cf79d8ed83568b0a54081504?Expires=1744588800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=jvgNDCDL4mWqA0jpFoD2DS46oSUwz2hFXdNmY65bo-8EUYYI6jFriGMOIuxnG~JSyCJoM4Ud9P-XYa0N63vjyxRCfa0gu2~ICXUxWs1QDI9gfrlhVEU2AxLjm6NavXhC5cgN5OeVZF1FmDuy1R~1raKGjXfmjNyAzcb6dWdDAIWBRCKBjv18iD453uao00x6tiXQOXJVsQTVp~FzWAlvMTZjNOQvHiEY2qXmwANAeEMK2NX50ouJtdcGvQLJm0CmfFKfGEQOifxBwq06taIuuAUHBf9vDTMD8l7QvTFjvxRSAcndn9-fg2EurYUvYlFyN0YNYJToJGjbfOSw~uFoRA__"
+            alt=""
+          />
+          <p class="name">Yoga</p>
+          <p class="title">Thư giãn và cân bằng tâm trí</p>
+          <button>Đặt lịch</button>
+        </div>
+        <div>
+          <img
+            src="https://s3-alpha-sig.figma.com/img/7ef9/67fa/e24731f1d342cc2c22dbd1e6701e6e6e?Expires=1744588800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VNWfcYK3ChgOhb4bsJ2awwqCldNKQRrNuFihPoSB8UmUFv5NSUz6DwsS0KSZcooFaXDysjpgLcLM9CDQdrFlblZw8COPe8MxumfMLvzTCXGMyk4urduDzdG1HTm0plzwiVi2QRskpC~UirRLQbLv1oX75l3ThC7T2Qdle8Q3kszIOP5P5wOv-qa43YsVHi4FtlaSh5HxCfkIgjl2KxBq8bH7vAXqlQ1PjFnzJXl7psUmcA7DfVN5J25PYUN2T~yvfeAsxTSZYlbn33oLF15QWPDAsLzMPlmg-hfJfoolxpyDaiSbMiZYCTQmakD--9pIZnqAPT~gR3HqNHOW1Rj0fw__"
+            alt=""
+          />
+          <p class="name">Zumba</p>
+          <p class="title">Đốt cháy calories với những điệu nhảy sôi động</p>
+          <button>Đặt lịch</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="block1">
+        <div class="content1">
+          <h4>Về chúng tôi</h4>
+          <p>
+            Gym Management - Nơi bạn bắt đầu hành trình fitness của mình với các
+            trang thiết bị hiện đại và đội ngũ huấn luyện viên chuyên nghiệp
+          </p>
+        </div>
+        <div class="content2">
+          <h4>Liên hệ</h4>
+          <p>Email: contact@gym.com</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Địa chỉ: 123 Đường ABC, Quận XYZ</p>
+        </div>
+        <div class="content3">
+          <h4>Theo dõi chúng tôi</h4>
+          <div>
+            <a href="https://www.facebook.com/virussvn">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">X</a>
+          </div>
+        </div>
+      </div>
+      <div class="block2">&copy; 2024 Gym Management. All rights reserved.</div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

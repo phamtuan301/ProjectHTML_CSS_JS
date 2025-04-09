@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Gym Management</title>
+    <link href="../../assets/css/dashboard.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="nav-bar">
+        <h3>Admin Dashboard</h3>
+        <ul>
+          <li>
+            <a href="../../pages/admin/dashboard.html">Quản lý lịch</a>
+          </li>
+          <li>
+            <a href="../../pages/admin/services.html">Quản lý dịch vụ</a>
+          </li>
+          <li>
+            <a href="../../index.html">Trang chủ</a>
+          </li>
+          <li>
+            <a
+              href="../../pages/auth/login.html"
+              class="red"
+              style="color: red"
+              >Đăng xuất</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <h2>Thống kê lịch tập</h2>
+        <div class="statistical">
+          <div class="box">
+            <h3>Tổng số lịch Gym</h3>
+            <span>0</span>
+          </div>
+          <div class="box">
+            <h3>Tổng số lịch Yoga</h3>
+            <span>0</span>
+          </div>
+          <div class="box">
+            <h3>Tổng số lịch Zumba</h3>
+            <span>0</span>
+          </div>
+        </div>
+        <div
+          class="chart-container"
+          style=" margin: 2rem auto"
+        >
+          <canvas id="bookingChart"></canvas>
+        </div>
+      </main>
+    </div>
+    <div class="searchUser">
+      <h3>Bộ lọc</h3>
+      <div class="filter">
+        <div class="boxFilter">
+          <label for="">Lớp học</label>
+          <select name="" id="">
+            <option value="all">Tất cả</option>
+            <option value="gym">Gym</option>
+            <option value="yoga">Yoga</option>
+            <option value="zumba">Zumba</option>
+          </select>
+        </div>
+        <div class="boxFilter">
+          <label for="">Email</label>
+          <input
+            type="email"
+            id="filterEmail"
+            placeholder="Tìm theo email"
+            class="input"
+          />
+        </div>
+        <div class="boxFilter">
+          <label for="">Ngày</label>
+          <input type="date" name="" id="filterDate" class="input" />
+        </div>
+      </div>
+    </div>
+    <div class="listUser">
+      <table>
+        <thead>
+          <tr>
+            <th>Lớp học</th>
+            <th>Ngày tập</th>
+            <th>Khung giờ</th>
+            <th>Họ tên</th>
+            <th>Email</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody id=""></tbody>
+      </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("bookingChart").getContext("2d");
+      const bookingChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Gym", "Yoga", "Zumba"],
+          datasets: [
+            {
+              label: "Số lượng lịch đặt",
+              data: [0, 0, 0], 
+              backgroundColor: "rgba(54, 162, 235, 0.5)",
+              borderColor: "rgba(54, 162, 235, 1)",
+              borderWidth: 1,
+              barThickness: 300,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "top",
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                stepSize: 1,
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

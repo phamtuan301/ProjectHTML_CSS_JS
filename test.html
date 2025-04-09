@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biểu đồ lịch đặt</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      border: 5px solid #2196f3;
+      box-sizing: border-box;
+    }
+
+    .chart-container {
+      width: 90%;
+      height: 80%;
+    }
+  </style>
+</head>
+<body>
+  <div class="chart-container">
+    <canvas id="bookingChart"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('bookingChart').getContext('2d');
+    const bookingChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Gym', 'Yoga', 'Zumba'],
+        datasets: [{
+          label: 'Số lượng lịch đặt',
+          data: [2, 1, 1], // Giá trị mẫu, bạn có thể thay đổi
+          backgroundColor: 'rgba(54, 162, 235, 0.5)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1,
+          barThickness: 50,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              stepSize: 1
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

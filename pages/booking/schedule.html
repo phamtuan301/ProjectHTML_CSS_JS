@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý lịch tập</title>
+    <link rel="stylesheet" href="../../assets/css/schedule.css" />
+  </head>
+  <body>
+    <nav class="header">
+      <p>GYM MANAGEMENT</p>
+      <ul>
+        <li><a href="../../index.html">Trang chủ</a></li>
+        <li><a href="">Lịch tập</a></li>
+        <li id="user-info" style="display: none"></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <p>Quản lý lịch tập</p>
+      <button class="add-schedule" onclick="openModal()">Đặt lịch mới</button>
+    </div>
+    <table id="schedule-table">
+      <thead>
+        <tr>
+          <th class="class">Lớp học</th>
+          <th class="date">Ngày tập</th>
+          <th class="time">Khung giờ</th>
+          <th class="name">Họ và tên</th>
+          <th class="email">Email</th>
+          <th class="action">Thao tác</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+      </tbody>
+    </table>
+    <div class="modal-background" id="modal-background">
+      <div class="modal-container">
+        <h2>Đặt lịch mới</h2>
+
+        <label for="class">Lớp học</label>
+        <select id="class">
+          <option>Chọn lớp học</option>
+          <option>Gym</option>
+          <option>Yoga</option>
+          <option>Zumba</option>
+        </select>
+        <label for="date">Ngày tập</label>
+        <input type="date" id="date" />
+        <label for="time-slot">Khung giờ</label>
+        <select id="time-slot">
+          <option>Chọn khung giờ</option>
+          <option value="7h-9h">7h-9h</option>
+          <option value="9h-11h">9h-11h</option>
+          <option value="13h-15h">13h-15h</option>
+          <option value="15h-17h">15h-17h</option>
+          <option value="17h-19h">17h-19h</option>
+        </select>
+        <div class="buttons">
+          <button class="cancel" onclick="closeModal()">Hủy</button>
+          <button class="save" onclick="saveSchedule()">Lưu</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-background" id="delete-modal">
+      <div class="delete-container">
+        <h2>Xác nhận xóa</h2>
+        <p>Bạn có chắc chắn muốn xóa lịch này?</p>
+        <div class="buttons">
+          <button class="cancel" onclick="closeDeleteModal()">Hủy</button>
+          <button class="save" onclick="deleteSchedule()">Xóa</button>
+        </div>
+      </div>
+    </div>
+    <script src="../../assets/js/booking.js"></script>
+  </body>
+</html>
