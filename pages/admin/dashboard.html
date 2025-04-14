@@ -21,10 +21,7 @@
             <a href="../../index.html">Trang chủ</a>
           </li>
           <li>
-            <a
-              href="../../pages/auth/login.html"
-              class="red"
-              style="color: red"
+            <a href="../../pages/auth/login.html" class="red" style="color: red"
               >Đăng xuất</a
             >
           </li>
@@ -46,10 +43,7 @@
             <span>0</span>
           </div>
         </div>
-        <div
-          class="chart-container"
-          style=" margin: 2rem auto"
-        >
+        <div class="chart-container" style="margin: 2rem auto">
           <canvas id="bookingChart"></canvas>
         </div>
       </main>
@@ -82,7 +76,7 @@
       </div>
     </div>
     <div class="listUser">
-      <table>
+      <table id="schedule-table">
         <thead>
           <tr>
             <th>Lớp học</th>
@@ -93,8 +87,49 @@
             <th>Thao tác</th>
           </tr>
         </thead>
-        <tbody id=""></tbody>
+        <tbody id="userList"></tbody>
       </table>
+    </div>
+
+    <!-- Modal sửa lịch -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span id="cancelEdit" class="close">&times;</span>
+        <h3>Sửa lịch tập</h3>
+        <form id="editForm">
+          <label for="editClass">Lớp học:</label>
+          <select id="editClass" required>
+            <option value="Gym">Gym</option>
+            <option value="Yoga">Yoga</option>
+            <option value="Zumba">Zumba</option>
+          </select>
+
+          <label for="editDate">Ngày:</label>
+          <input type="date" id="editDate" required />
+
+          <label for="editTimeSlot">Khung giờ:</label>
+          <select id="editTimeSlot" required>
+            <option value="7h-9h">7h-9h</option>
+            <option value="9h-11h">9h-11h</option>
+            <option value="13h-15h">13h-15h</option>
+            <option value="15h-17h">15h-17h</option>
+            <option value="17h-19h">17h-19h</option>
+          </select>
+
+          <button type="submit">Lưu</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="deleteModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <h3>Xác nhận xóa</h3>
+        <p>Bạn có chắc chắn muốn xóa lịch này không?</p>
+        <div class="modal-actions">
+          <button id="confirmDelete">Xóa</button>
+          <button id="cancelDelete">Hủy</button>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -106,7 +141,7 @@
           datasets: [
             {
               label: "Số lượng lịch đặt",
-              data: [0, 0, 0], 
+              data: [0, 0, 0],
               backgroundColor: "rgba(54, 162, 235, 0.5)",
               borderColor: "rgba(54, 162, 235, 1)",
               borderWidth: 1,
@@ -132,5 +167,6 @@
         },
       });
     </script>
+    <script src="../../assets/js/dashboard.js"></script>
   </body>
 </html>

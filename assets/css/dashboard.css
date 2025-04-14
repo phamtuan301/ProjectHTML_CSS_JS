@@ -87,7 +87,7 @@ span {
   background-color: #0062ff;
 }
 tr {
-  background-color: #dedede;
+  background-color: #fffefe;
   border-radius: 3px;
   width: 1248px;
   height: 49px;
@@ -95,7 +95,11 @@ tr {
   padding-left: 10px;
 }
 th {
+  background-color: #e4e4e4;
   width: 300px;
+  padding-left: 10px;
+}
+td {
   padding-left: 10px;
 }
 .header {
@@ -152,4 +156,29 @@ select {
   background: #fff;
   width: 1206px;
 }
-
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 400px;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}

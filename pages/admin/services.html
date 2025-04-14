@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/services.css">
   </head>
   <body>
     <div class="container">
@@ -39,7 +39,7 @@
       <main>
         <div class="header">
           <h3 class="title">Quản lý dịch vụ</h3>
-          <button class="btn-add" id="btn add">Thêm dịch vụ mới</button>
+          <button class="btn-add" id="btn-add">Thêm dịch vụ mới</button>
         </div>
         <table>
           <tr>
@@ -51,5 +51,32 @@
         </table>
       </main>
     </div>
+    <div class="modal" id="service-modal">
+      <div class="modal-content">
+        <h3 id="modal-title">Thêm Dịch Vụ</h3>
+        <label for="service-name">Tên dịch vụ</label>
+        <input type="text" id="service-name" placeholder="Tên dịch vụ">
+        <label for="service-description">Mô tả dịch vụ</label>
+        <textarea id="service-description" placeholder="Mô tả dịch vụ"></textarea>
+        <label for="service-image">Hình ảnh</label>
+        <input type="url" id="service-image" placeholder="URL hình ảnh">
+        <div class="action-btn">
+        <button id="close-service" onclick="closeModal()">Hủy</button>
+        <button id="save-service">Lưu</button>
+        </div>
+      </div>
+    </div>  
+      <div class="modal" id="delete-modal" style="display: none;">
+        <div class="modal-content">
+          <h3>Xác nhận xóa</h3>
+          <p>Bạn có chắc muốn xóa dịch vụ này không?</p>
+          <div class="action-btn">
+            <button id="delete-cancel-btn">Hủy</button>
+            <button id="delete-confirm-btn" style="color: red;">Xóa</button>
+          </div>
+        </div>
+      </div>
+      
+    <script src="../../assets/js/services.js"></script>
   </body>
 </html>

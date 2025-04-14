@@ -102,7 +102,6 @@ table {
 tr {
   height: 49px;
   text-align: left;
-  
 }
 .td {
   padding-left: 10px;
@@ -125,12 +124,12 @@ tr {
   margin-left: 33%;
   margin-top: 10%;
   width: 500px;
-  height:400px;
+  height: 400px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   margin-left: 33%;
   margin-top: 10%;
   border-radius: 8px;
-  padding:17px;
+  padding: 17px;
 }
 
 .modal-container h2 {
@@ -163,7 +162,7 @@ select {
   border-radius: 4px;
   height: 40px;
   width: 60px;
-  border:solid 1px #b0b0b0;
+  border: solid 1px #b0b0b0;
 }
 
 .cancel:hover {
@@ -177,7 +176,7 @@ select {
   margin-left: 8px;
   height: 40px;
   width: 60px;
-  border:1px solid #3b82f6;
+  border: 1px solid #3b82f6;
 }
 
 .save:hover {
@@ -192,10 +191,10 @@ select {
 }
 .delete {
   background-color: rgb(245, 86, 86);
-  color:white;
-  border:1px solid rgb(245, 86, 86);
-  height:30px;
-  width:50px;
+  color: white;
+  border: 1px solid rgb(245, 86, 86);
+  height: 30px;
+  width: 50px;
   border-radius: 4px;
 }
 .delete:hover {
@@ -203,14 +202,14 @@ select {
 }
 .edit {
   background-color: rgb(194, 192, 192);
-  color:rgb(71, 70, 70);
-  border:1px solid rgb(194, 192, 192);
-  height:30px;
-  width:50px;
+  color: rgb(71, 70, 70);
+  border: 1px solid rgb(194, 192, 192);
+  height: 30px;
+  width: 50px;
   border-radius: 4px;
 }
 .edit:hover {
-  background:rgb(141, 140, 140);
+  background: rgb(141, 140, 140);
 }
 .delete-container {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -218,14 +217,34 @@ select {
   margin-top: 10%;
   background-color: white;
   margin-top: 10%;
-  width:500px;
-  height:200px;
+  width: 500px;
+  height: 200px;
   border-radius: 8px;
   padding: 25px;
 }
 .add-schedule:hover {
-  background:#2563eb;
+  background: #2563eb;
 }
 a:hover {
-  color:#9a9a9a;
+  color: #9a9a9a;
+}
+.pagination-button {
+  border: none;
+  margin: 0 5px;
+  padding: 6px 12px;
+  background-color: #f1f1f1;
+  color: #333;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.pagination-button:hover {
+  background-color: #ddd;
+}
+
+.pagination-button.active {
+  background-color: #4285f4;
+  color: white;
+  font-weight: bold;
 }
